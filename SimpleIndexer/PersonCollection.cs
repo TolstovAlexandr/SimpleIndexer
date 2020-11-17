@@ -15,10 +15,7 @@ namespace SimpleIndexer
             get => (Person)arPeople[index];
             set => arPeople.Insert(index, value);
         }
-        public IEnumerator GetEnumerator()
-        {
-            return arPeople.GetEnumerator();
-        }
+        IEnumerator IEnumerable.GetEnumerator() => arPeople.GetEnumerator();
         public int Count
         {
             get => arPeople.Count;
